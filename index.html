@@ -118,9 +118,20 @@
 
     /* Media Query para dispositivos pequeños (por ejemplo, móviles) */
     @media (max-width: 768px) {
+        /* Contenedor del reproductor con márgenes arriba y abajo */
+        #reproductor {
+            display: block;
+            padding: 0;
+            margin-top: 20vh;  /* Espacio arriba */
+            margin-bottom: 20vh;  /* Espacio abajo */
+        }
+
         iframe {
             width: 50%; /* El iframe sigue ocupando el 50% en pantallas pequeñas */
             height: 28.125vw; /* Mantiene la relación 16:9 */
+            max-width: 900px;
+            max-height: 506px;
+            margin: 0 auto; /* Centra el iframe */
         }
     }
 </style>
