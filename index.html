@@ -6,101 +6,123 @@
     <title>soreteperro.com</title>
     <!-- Favicon en formato Base64 -->
     <link rel="icon" type="image/png" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAgACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABggDBQkH/8QALBAAAQQBBAECBQQDAAAAAAAAAQIDBAURBgcSIQATQQgiMTJSCRUWkRdhof/EABYBAQEBAAAAAAAAAAAAAAAAAAIEA//EAB8RAAICAgEFAAAAAAAAAAAAAAABAhEDEkEEITFhsf/aAAwDAQACEQMRAD8A0oo5CJGrtSIB5IjiIyUZ6Sr01LPXscLT/wA8IFNt4+0Z8V/bjdS60ynVki7km0l2qzKaebjttluQGg2nlg44BLbft1g/XPihbZ/qLby0WvolBeSqnXLYloamhUdpgBsuAKWh9vgGwAoAKWCke/mWOSknRT1GJ4Z6P18NXmmUY+0Y8kDKPxH9eAMTfrbeW82y3rmhDzgBS2ue2lR/s+FLOsaFwpCLuvUVDIAlI7H+u/HsnyT0JNvRuDSbTUaosl2S9qSzQturqq2OZMt9eCPUS0nvggkEk4HWBknxe/ir0zD0Boza/TUiPCi3smves7RcFB4zy2hphp5auKclWFuBCvmSXDywfGbm7cWNNqO2vKeiVOv562xLsZDDkdUpKCAElSEKKEBOcJSME9n65Fh/jaRf3sW5utIQbG0jcUxpUmE4tUdCVFSEo5kgAE5zjJPZ8nxtQvsJtPkyyu9JuMPw3ZwTWoylDIloUhbyVJWebSSn50JKQFKB6KkD38618L2+Frt/ubR6emz/ANw0zazG4MiK+v1G2fUVxQ80T9pSopyB0QSCM4IfzdXZG43rXUVd9Ea/j0NwTS81zbmNyUKHphs8CEoxy5d99DB6Ir9FfBpROWlzeazpaywubS1FiTXsrZZihAIQhoYBGclaiAPmI/EE77bKpINV4P/Z">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        #pantalla-inicial {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            background-color: black;
-            overflow: hidden;
-        }
-        #pantalla-inicial img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        #icono-acceso {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        #icono-acceso:hover {
-            background-color: rgba(255, 255, 255, 1);
-        }
-        #icono-acceso img {
-            width: 50%;
-            height: 50%;
-        }
-        #reproductor {
-            display: none;
-            position: relative;
-            padding: 20px;
-        }
-        #icono-regreso {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        #icono-regreso:hover {
-            background-color: rgba(255, 255, 255, 1);
-        }
-        #icono-regreso img {
-            width: 50%;
-            height: 50%;
-        }
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    #pantalla-inicial {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    #pantalla-inicial img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #icono-acceso {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #icono-acceso:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    #icono-acceso img {
+        width: 50%;
+        height: 50%;
+    }
+
+    #reproductor {
+        display: none;
+        position: relative;
+        padding: 20px;
+    }
+
+    #icono-regreso {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #icono-regreso:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    #icono-regreso img {
+        width: 50%;
+        height: 50%;
+    }
+
+    /* Estilo para el iframe (reproductor de video) */
+    iframe {
+        width: 100%; /* Hace que ocupe el 100% del ancho de la pantalla */
+        height: 56.25vw; /* Relación de aspecto 16:9 basada en el ancho */
+        max-width: 900px; /* Máximo tamaño */
+        max-height: 506px; /* Máxima altura */
+        border: none;
+        border-radius: 10px;
+    }
+
+    #extra-contenido {
+        height: 300vh; /* Triple de la altura de la pantalla */
+    }
+
+    #imagen1 {
+        height: 300vh; /* Ocupa todo el espacio disponible */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px; /* Espacio ampliado entre el reproductor y la primera imagen */
+    }
+
+    #imagen1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Media Query para dispositivos pequeños (por ejemplo, móviles) */
+    @media (max-width: 768px) {
         iframe {
-            width: 80%;
-            max-width: 900px;
-            height: 506px; /* Relación de aspecto 16:9 */
-            border: none;
-            border-radius: 10px;
+            height: 56.25vw; /* Mantiene la relación de aspecto 16:9 */
         }
-        #extra-contenido {
-            height: 300vh; /* Triple de la altura de la pantalla */
-        }
-        #imagen1 {
-            height: 300vh; /* Ocupa todo el espacio disponible */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 150px; /* Espacio ampliado entre el reproductor y la primera imagen */
-        }
-        #imagen1 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    }
+</style>
 <script>
     // Espera que la página cargue completamente
     window.onload = function() {
