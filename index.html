@@ -102,20 +102,18 @@
         }
     </style>
  <script>
-    window.onload = function() {
-        // Verificamos si ya se ha hecho la redirección
-        const enlacePrincipal = "https://srtprr.github.io/Sorete-perro/";
-        
-        // Verificamos si la página ya ha sido redirigida
-        if (!localStorage.getItem("redirigido")) {
-            // Si no se ha redirigido, redirigimos y almacenamos la marca
-            if (window.location.href !== enlacePrincipal) {
-                localStorage.setItem("redirigido", "true");
-                window.location.href = enlacePrincipal;
+        // Espera que la página cargue completamente
+        window.onload = function() {
+            // Verifica el tamaño de la ventana para determinar el dispositivo
+            if (window.innerWidth <= 768) {
+                // Redirige a la versión móvil si el ancho de la pantalla es 768px o menos
+                window.location.href = "https://srtprr.github.io/Sorete-perro-Movil/";  // Cambia esta URL por la URL de la versión móvil
+            } else {
+                // Redirige a la versión de escritorio si el ancho de la pantalla es mayor a 768px
+                window.location.href = "https://srtprr.github.io/Sorete-perro-PC/";  // Cambia esta URL por la URL de la versión de escritorio
             }
-        }
-    }
-</script>
+        };
+    </script>
 </head>
 <body>
     <!-- Pantalla Inicial -->
