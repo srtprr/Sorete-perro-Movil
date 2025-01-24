@@ -101,15 +101,15 @@
             object-fit: cover;
         }
     </style>
-    <script>
+  <script>
+    window.onload = function() {
         // Redirección al enlace principal
-        (function redirigirAlPrincipal() {
-            const enlacePrincipal = "https://srtprr.github.io/Sorete-perro/";
-            if (window.location.href !== enlacePrincipal) {
-                window.location.href = enlacePrincipal;
-            }
-        })();
-    </script>
+        const enlacePrincipal = "https://srtprr.github.io/Sorete-perro/";
+        if (window.location.href !== enlacePrincipal) {
+            window.location.href = enlacePrincipal;
+        }
+    }
+</script>
 </head>
 <body>
     <!-- Pantalla Inicial -->
