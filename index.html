@@ -88,39 +88,38 @@
         height: 50%;
     }
 
-    /* Estilo para el iframe (reproductor de video) */
+    /* Contenedor para el reproductor */
+    #contenedor-reproductor {
+        width: 100%;
+        height: 100vh; /* Total de la altura de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     iframe {
-        width: 50%; /* Ahora el iframe ocupa el 50% del ancho */
-        height: 28.125vw; /* Relación de aspecto 16:9 con 50% de ancho */
+        width: 50%; /* El iframe ocupa el 50% del ancho */
+        height: 28.125vw; /* Relación de aspecto 16:9 */
         max-width: 900px; /* Máximo tamaño */
         max-height: 506px; /* Máxima altura */
         border: none;
         border-radius: 10px;
     }
 
-    #extra-contenido {
-        height: 300vh; /* Triple de la altura de la pantalla */
-    }
-
-    #imagen1 {
-        height: 300vh; /* Ocupa todo el espacio disponible */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 150px; /* Espacio ampliado entre el reproductor y la primera imagen */
-    }
-
-    #imagen1 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     /* Media Query para dispositivos pequeños (por ejemplo, móviles) */
     @media (max-width: 768px) {
-        iframe {
-            width: 50%; /* El iframe sigue ocupando el 50% en pantallas pequeñas */
-            height: 28.125vw; /* Mantiene la relación 16:9 */
+        /* El contenedor ocupa toda la pantalla */
+        #contenedor-reproductor {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Espacio entre el iframe y los márgenes */
+        }
+
+        /* Espacios arriba y abajo del iframe */
+        #contenedor-reproductor iframe {
+            margin-top: 20vh; /* Espacio arriba del iframe */
+            margin-bottom: 20vh; /* Espacio abajo del iframe */
         }
     }
 </style>
