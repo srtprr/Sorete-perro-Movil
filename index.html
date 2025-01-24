@@ -6,7 +6,7 @@
     <title>soreteperro.com</title>
     <!-- Favicon en formato Base64 -->
     <link rel="icon" type="image/png" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAgACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABggDBQkH/8QALBAAAQQBBAECBQQDAAAAAAAAAQIDBAURBgcSIQATQQgiMTJSCRUWkRdhof/EABYBAQEBAAAAAAAAAAAAAAAAAAIEA//EAB8RAAICAgEFAAAAAAAAAAAAAAABAhEDEkEEITFhsf/aAAwDAQACEQMRAD8A0oo5CJGrtSIB5IjiIyUZ6Sr01LPXscLT/wA8IFNt4+0Z8V/bjdS60ynVki7km0l2qzKaebjttluQGg2nlg44BLbft1g/XPihbZ/qLby0WvolBeSqnXLYloamhUdpgBsuAKWh9vgGwAoAKWCke/mWOSknRT1GJ4Z6P18NXmmUY+0Y8kDKPxH9eAMTfrbeW82y3rmhDzgBS2ue2lR/s+FLOsaFwpCLuvUVDIAlI7H+u/HsnyT0JNvRuDSbTUaosl2S9qSzQturqq2OZMt9eCPUS0nvggkEk4HWBknxe/ir0zD0Boza/TUiPCi3smves7RcFB4zy2hphp5auKclWFuBCvmSXDywfGbm7cWNNqO2vKeiVOv562xLsZDDkdUpKCAElSEKKEBOcJSME9n65Fh/jaRf3sW5utIQbG0jcUxpUmE4tUdCVFSEo5kgAE5zjJPZ8nxtQvsJtPkyyu9JuMPw3ZwTWoylDIloUhbyVJWebSSn50JKQFKB6KkD38618L2+Frt/ubR6emz/ANw0zazG4MiK+v1G2fUVxQ80T9pSopyB0QSCM4IfzdXZG43rXUVd9Ea/j0NwTS81zbmNyUKHphs8CEoxy5d99DB6Ir9FfBpROWlzeazpaywubS1FiTXsrZZihAIQhoYBGclaiAPmI/EE77bKpINV4P/Z">
-<style>
+ <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -90,8 +90,8 @@
 
     /* Estilo para el iframe (reproductor de video) */
     iframe {
-        width: 50%; /* Ahora el iframe ocupa el 50% del ancho */
-        height: 28.125vw; /* Relación de aspecto 16:9 con 50% de ancho */
+        width: 100%; /* Hace que ocupe el 100% del ancho de la pantalla */
+        height: 56.25vw; /* Relación de aspecto 16:9 basada en el ancho */
         max-width: 900px; /* Máximo tamaño */
         max-height: 506px; /* Máxima altura */
         border: none;
@@ -119,8 +119,7 @@
     /* Media Query para dispositivos pequeños (por ejemplo, móviles) */
     @media (max-width: 768px) {
         iframe {
-            width: 50%; /* El iframe sigue ocupando el 50% en pantallas pequeñas */
-            height: 28.125vw; /* Mantiene la relación 16:9 */
+            height: 56.25vw; /* Mantiene la relación de aspecto 16:9 */
         }
     }
 </style>
